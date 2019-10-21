@@ -1,0 +1,29 @@
+.NavBar {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background: #123A16;
+    color: white;
+}
+
+.NavBar a {
+    cursor: pointer;
+}
+
+.refugee-Link {
+    margin-left: 50px;
+    font-size: 40px;
+    padding-top: 1px;
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-weight: bolder;
+}
+
+.navBar-Links {
+    margin-right: 50px;
+    padding-top: 15px;
+}
+
+.navBar-Links a {
+    margin-left: 20px;
+}

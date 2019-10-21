@@ -1,0 +1,31 @@
+.Register {
+    border: 1px solid black;
+}
+
+.Register h1 {
+    padding-top: 100px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form input {
+    width: 250px;
+    height: 40px;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: #D2DDD3;
+}
+
+.register-form button {
+    width: 180px;
+    height: 40px;
+    margin: auto;
+    border-radius: 5px;
+    background: #25742C;
+    color: white;
+    margin-bottom: 100px;
+}
