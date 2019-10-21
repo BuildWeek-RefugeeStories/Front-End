@@ -1,19 +1,19 @@
-.Register {
+.Login {
     border: 1px solid black;
 }
 
-.Register h1 {
+.Login h1 {
     padding-top: 100px;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 2.5rem;
 }
 
-.register-form {
+.login-form {
     display: flex;
     flex-direction: column;
 }
 
-.register-form input {
+.login-form input {
     width: 250px;
     height: 40px;
     margin: auto;
@@ -24,13 +24,13 @@
     border: #5DA7E7;
 }
 
-.register-form input::placeholder {
+.login-form input::placeholder {
     font-size: 17px;
     padding-left: 15px;
     color: #879288;
 }
 
-.register-form button {
+.login-form button {
     width: 180px;
     height: 40px;
     margin: auto;
@@ -44,15 +44,15 @@
 }
 
 
-#login  {
+#register  {
     margin-bottom: 100px;
 }
 
-#login a {
+#register a {
     text-decoration: none;
     color: black;
 }
 
-#login a:hover {
+#register a:hover {
     color: #25742C;
 }
