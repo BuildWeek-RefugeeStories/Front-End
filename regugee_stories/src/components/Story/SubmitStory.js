@@ -1,18 +1,48 @@
-import React, { useState } from 'react';
-import './SubmitStory.css'
+import React, { useState, useEffect } from 'react';
+import './SubmitStory.css';
+import { Link } from 'react-router-dom';
+import HomeCard from '../HomePage/HomeCards';
 
 
-const SubmitStory = () => {
+const SubmitStory = (props) => {
+     const [data, setData] = useState([{
+         title: '',
+         author: '',
+         anon: false,
+         text: '',
+     }])
+
+
+     const handleChange = e => {
+         e.preventDefault();
+         setData({...data, [e.target.name]: e.target.value})
+         console.log('SS input Value...', data)
+     }
+
+     const onSumbit = e => {
+         e.preventDefault();
+         setData({...data})
+         console.log('Saved input Value...', data)
+         props.history.push('/home')
+     }
+
     return (
         <div className='SubmitStory'>
-            <form>
+            <form onSubmit={onSumbit}>
                 <h1 className='submit-form'>Submit a Story</h1>
                 <div className='ss-Top-Section'>
                      <div className='top-Left'>
                          <span>Title</span>
-                         <input></input>
+                         <input
+                         onChange={handleChange}
+                         name='title'
+                         ></input>
                          <span>Author</span>
-                         <input></input>
+                         <input
+                         onChange={handleChange}
+                         name='author'
+                         >
+                         </input>
                          <div id='anonymous'>
                             <input type='checkbox'></input>
                             <p>I prefer to stay anonymous</p>
@@ -32,7 +62,11 @@ const SubmitStory = () => {
             <div id='ss-Bottom-Section'>
                 <div className='ss-Bottom-Section'>
                     <div className='ss-Bottom-left'>
-                        <input></input>
+                        <textarea
+                        placeholder='Type Story Here'
+                        onChange={handleChange}
+                        name='text'
+                        ></textarea>
                     </div>
                     <div className='ss-Bottom-Right'>
                         <h1>Upload an Image</h1>
@@ -41,14 +75,17 @@ const SubmitStory = () => {
                         <span>or</span>
                         <br/>
                         <button>UPLOAD</button>
-                    </div>
+                    </div> 
                 </div> {/* ss-Bottom-Section end */}
                 <div className='submit-button'>
                         <button>PREVIEW</button>
                         <button>SUBMIT</button>
                 </div> {/* submit-button end */}
-            </div>
+            </div> {/* #ss-Bottom-Section end */}
             </form> {/* submit-form end */}
+            <div className='home-text-link'>
+                <Link to='/home'>Return Home</Link>
+            </div>
         </div> /* SubmitStory end */
     )
 }

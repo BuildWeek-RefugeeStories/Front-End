@@ -28,7 +28,7 @@ const Login = (props) => {
 
     const onSubmit = e => {
         e.preventDefault();
-        validUser({...setLoggedIn});
+        validUser({...loggedIn});
     }
 
     
@@ -44,15 +44,12 @@ const Login = (props) => {
                 name='email' 
                 placeholder='Email'>
                 </input>
-                <div className='Eye'>
-                
                 <input
                 onChange={handleChange} 
                 type='password'
                 name='password' 
                 placeholder='Password'>
                 </input>
-                </div> {/* Eye end */}
                 <button>Login</button>
             </form> {/* login-form end */}
 
