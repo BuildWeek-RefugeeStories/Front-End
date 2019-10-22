@@ -1,0 +1,58 @@
+.Register {
+    border: 1px solid black;
+}
+
+.Register h1 {
+    padding-top: 100px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2.5rem;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form input {
+    width: 250px;
+    height: 40px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: #D2DDD3;
+    outline: none;
+    border: #5DA7E7;
+    font-size: 20px;
+}
+
+.register-form input::placeholder {
+    padding-left: 15px;
+    color: #879288;
+}
+
+.register-form button {
+    width: 180px;
+    height: 40px;
+    margin: auto;
+    border-radius: 5px;
+    background: #25742C;
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+    text-shadow: 1px 1px black;
+    margin-top: 10px;
+}
+
+
+#login  {
+    margin-bottom: 100px;
+}
+
+#login a {
+    text-decoration: none;
+    color: black;
+}
+
+#login a:hover {
+    color: #25742C;
+}
