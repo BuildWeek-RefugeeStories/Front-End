@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './SubmitStory.css'
+import './SubmitStory.css';
+import { Link } from 'react-router-dom';
 
 
 const SubmitStory = () => {
@@ -41,14 +42,17 @@ const SubmitStory = () => {
                         <span>or</span>
                         <br/>
                         <button>UPLOAD</button>
-                    </div>
+                    </div> 
                 </div> {/* ss-Bottom-Section end */}
                 <div className='submit-button'>
                         <button>PREVIEW</button>
                         <button>SUBMIT</button>
                 </div> {/* submit-button end */}
-            </div>
+            </div> {/* #ss-Bottom-Section end */}
             </form> {/* submit-form end */}
+            <div className='home-text-link'>
+                <Link to='/home'>Return Home</Link>
+            </div>
         </div> /* SubmitStory end */
     )
 }
