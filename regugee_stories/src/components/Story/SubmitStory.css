@@ -9,6 +9,7 @@
     text-align: start;
     margin-left: 250px;
     margin-top: 50px;
+    color: #2c4f2f;
 }
 
 .top-Left {
@@ -86,6 +87,7 @@
     border-radius: 6px;
     margin-left: -9px;
     outline: none;
+    border: #5DA7E7;
 }
 
 .ss-Bottom-Right {

@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Login from './components/Login/Login';
 import HomePage from './components/HomePage/HomePage'
 import SubmitStory from './components/Story/SubmitStory';
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Route exact path='/home' component={HomePage} />
           <Route exact path='/stories' component={SubmitStory} />
       </Router>
-      
+          <Footer />
     </div>
   );
 }
