@@ -28,7 +28,7 @@ const Login = (props) => {
 
     const onSubmit = e => {
         e.preventDefault();
-        validUser({...setLoggedIn});
+        validUser({...loggedIn});
     }
 
     

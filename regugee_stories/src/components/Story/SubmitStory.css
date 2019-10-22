@@ -1,3 +1,7 @@
+.SubmitStory {
+    margin: 0 25px;
+}
+
 .ss-Top-Section {
     display: flex;
     justify-content: space-between;
@@ -40,13 +44,13 @@
 
 .top-Right {
     width:  326px;
-    margin-right: 200px;
+    margin-right: 185px;
     font-family: 'Oxygen', sans-serif;
     color: #04480B;
     height: 212px;
     margin-top: 13px;
     text-align: center;
-    padding-top: 35px;
+    padding-top: 19px;
 }
 
 .top-Right-Links a {
