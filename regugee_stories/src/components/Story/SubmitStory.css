@@ -137,6 +137,8 @@
 .ss-Bottom-Right i {
     color: #2c4f2f;
     font-size: 49px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .ss-Bottom-Right span {
@@ -190,4 +192,21 @@
     margin-top: 12px;
     font-weight: bold;
     text-decoration: underline;
+}
+
+textarea {
+    width: 563px;
+    border-radius: 6px;
+    border: none;
+    padding: 1rem;
+    background-color: #d2ddd3;
+    font-size: 1.5rem;
+    outline: none;
+    border: #5DA7E7;
+    height: 668px;
+}
+
+textarea::placeholder {
+    font-size: 18px;
+    padding-top: 10px;
 }
