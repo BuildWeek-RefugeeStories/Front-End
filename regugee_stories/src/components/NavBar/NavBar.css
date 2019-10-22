@@ -5,6 +5,7 @@
     height: 50px;
     background: #123A16;
     color: white;
+    font-family: 'Oxygen', sans-serif;
 }
 
 .NavBar a {
@@ -26,4 +27,6 @@
 
 .navBar-Links a {
     margin-left: 20px;
+    text-decoration: none;
+    color: white;
 }

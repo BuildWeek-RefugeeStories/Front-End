@@ -22,10 +22,10 @@
     background: #D2DDD3;
     outline: none;
     border: #5DA7E7;
+    font-size: 20px;
 }
 
 .login-form input::placeholder {
-    font-size: 17px;
     padding-left: 15px;
     color: #879288;
 }

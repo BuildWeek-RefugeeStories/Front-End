@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Login.css';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 const Login = (props) => {
@@ -14,13 +15,29 @@ const Login = (props) => {
         console.log('Login input value...', loggedIn)
     }
 
+    const validUser = input => {
+        axios
+        .post("https://refugee-stories-api19.herokuapp.com/auth/login", input)
+        .then(res => {
+        localStorage.setItem("jwt", res.data.token)
+        localStorage.setItem("token", res.data.token)
+        props.history.push('/home')
+        })
+        .catch(err => console.log(err))
+    }
+
+    const onSubmit = e => {
+        e.preventDefault();
+        validUser({...setLoggedIn});
+    }
+
     
 
     return (
         <div className='Login'>
             <h1>Administrator Login</h1>
             <p>Please enter your email and password</p>
-            <form className='login-form'>
+            <form onSubmit={onSubmit} className='login-form'>
                 <input
                 onChange={handleChange} 
                 type='email' 

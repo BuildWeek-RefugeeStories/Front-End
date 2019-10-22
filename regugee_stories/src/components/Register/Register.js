@@ -23,7 +23,7 @@ function Register(props) {
         .post("https://refugee-stories-api19.herokuapp.com/auth/register", credentials)
         .then(res => {
             localStorage.setItem('token', res.data.token)
-            props.history.push('/')
+            props.history.push('/login')
         })
         .catch(err => console.log(err))
     };

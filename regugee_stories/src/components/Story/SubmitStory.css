@@ -1,0 +1,149 @@
+.ss-Top-Section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.submit-form  {
+    font-family: 'Oxygen', sans-serif;
+    text-align: start;
+    margin-left: 250px;
+    margin-top: 50px;
+}
+
+.top-Left {
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+}
+
+.top-Left span {
+    text-align: start;
+    font-size: 20px;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.top-Left input {
+    width: 355px;
+    height: 42px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: #D2DDD3;
+    outline: none;
+    border: #5DA7E7;
+    font-size: 20px;
+}
+
+.top-Right {
+    width: 305px;
+    margin-right: 200px;
+    font-family: 'Oxygen', sans-serif;
+    color: #04480B;
+    height: 212px;
+    margin-top: 13px;
+}
+
+.top-Right-Links a {
+    margin: 20px;
+    color: #04480B;
+    text-decoration: underline;
+}
+
+#anonymous {
+    display: flex;
+    width: 225px;
+    margin-right: 5px;
+}
+
+#anonymous input {
+    width: 22px;
+    margin: 0;
+}
+
+#anonymous p {
+    margin-top: 12px;
+}
+
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+.ss-Bottom-Section {
+    display: flex;
+    justify-content: space-between;
+}
+
+#ss-Bottom-Section {
+    background: #F4F4F4;
+    padding: 30px;
+    margin: 0 210px;
+}
+
+.ss-Bottom-left input {
+    width: 563px;
+    height: 668px;
+    background: #D2DDD3;
+    border-radius: 6px;
+    margin-left: -9px;
+    outline: none;
+}
+
+.ss-Bottom-Right {
+    border: 1px solid black;
+    width: 313px;
+    height: 300px;
+    background: #D2DDD3;
+    border: #5DA7E7;
+    border-radius: 6px;
+    margin-right: -9px;
+}
+
+.ss-Bottom-Right h1 {
+    font-family: 'Oxygen', sans-serif;
+    color: #2c4f2f;
+}
+
+.ss-Bottom-Right p {
+    font-family: 'Oxygen', sans-serif;
+    color: #2c4f2f;
+    margin-bottom: 3px;
+}
+
+.ss-Bottom-Right i {
+    color: #2c4f2f;
+    font-size: 49px;
+}
+
+.ss-Bottom-Right span {
+    margin: 0;
+    text-decoration: underline;
+    padding-bottom: 5px;
+}
+
+.ss-Bottom-Right button {
+    border: 2px solid #242825;
+    box-sizing: border-box;
+    border-radius: 6px;
+    height: 40px;
+    background: #D2DDD3;
+    margin-top: 15px;
+    width: 100px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.submit-button {
+    margin-left: 422px;
+    margin-top: 100px;
+}
+
+.submit-button button {
+    background: #25742C;
+    color: white;
+    height: 39px;
+    width: 172px;
+    font-size: 18px;
+    margin-right: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
