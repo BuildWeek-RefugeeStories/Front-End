@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function Footer() {
     return (
         <div className="footer">
@@ -17,9 +17,9 @@ function Footer() {
             </div>
 
             <div>
-                <a className="admin-btn" href="#">
+                <Link to="/login" className="admin-btn">
                     Admin Login
-                </a>
+                </Link>
                 <a href="#">Privacy Policy</a>
                 <a href="#">About Us</a>
             </div>

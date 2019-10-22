@@ -1,151 +1,145 @@
-.ss-Top-Section {
+.flex-row {
     display: flex;
-    justify-content: space-between;
-    padding: 50px;
+    flex-direction: row;
 }
 
-.submit-form  {
-    font-family: 'Oxygen', sans-serif;
-    text-align: start;
-    margin-left: 250px;
-    margin-top: 50px;
-    color: #2c4f2f;
-}
-
-.top-Left {
+.flex-col {
     display: flex;
     flex-direction: column;
-    margin-left: 200px;
 }
 
-.top-Left span {
-    text-align: start;
-    font-size: 20px;
-    font-family: 'Oxygen', sans-serif;
-}
-
-.top-Left input {
-    width: 355px;
-    height: 42px;
-    margin: auto;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    background: #D2DDD3;
-    outline: none;
-    border: #5DA7E7;
-    font-size: 20px;
-}
-
-.top-Right {
-    width: 305px;
-    margin-right: 200px;
-    font-family: 'Oxygen', sans-serif;
-    color: #04480B;
-    height: 212px;
-    margin-top: 13px;
-}
-
-.top-Right-Links a {
-    margin: 20px;
-    color: #04480B;
-    text-decoration: underline;
-}
-
-#anonymous {
+.container {
+    width: 80%;
+    max-width: 960px;
+    margin: 0 auto;
+    height: calc(100vh - 115px);
     display: flex;
-    width: 225px;
-    margin-right: 5px;
+    flex-direction: column;
 }
 
-#anonymous input {
-    width: 22px;
-    margin: 0;
+form {
+    margin-top: 50px;
+    font-family: "Oxygen", sans-serif;
 }
 
-#anonymous p {
-    margin-top: 12px;
+form h1 {
+    color: #242825;
+    margin-bottom: 75px;
 }
 
+form label {
+    color: #242825;
+    margin-bottom: 0.5rem;
+}
 
-/**//**//**//**//**//**//**//**//**//**//**//**//**/
+form input {
+    background-color: #d3ded4;
+    border-radius: 6px;
+    border: none;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+}
 
-.ss-Bottom-Section {
-    display: flex;
+.top {
+    padding: 0 1rem;
     justify-content: space-between;
 }
 
-#ss-Bottom-Section {
-    background: #F4F4F4;
-    padding: 30px;
-    margin: 0 210px;
+.info {
+    width: 50%;
 }
 
-.ss-Bottom-left input {
-    width: 563px;
-    height: 668px;
-    background: #D2DDD3;
+.anon-label {
+    font-size: 0.8rem;
+}
+
+.resources {
+    width: 40%;
+    text-align: center;
+}
+
+.resources p {
+    font-size: 0.9rem;
+    margin: 1rem 0;
+}
+
+.resources .links a {
+    color: #3d443e;
+}
+
+.resources .links a:last-child {
+    margin-left: 1rem;
+}
+
+.bottom {
+    padding: 1rem;
+    margin-top: 75px;
     border-radius: 6px;
-    margin-left: -9px;
-    outline: none;
-    border: #5DA7E7;
+    justify-content: space-between;
+    background-color: #f4f4f4;
 }
 
-.ss-Bottom-Right {
-    border: 1px solid black;
-    width: 313px;
-    height: 300px;
-    background: #D2DDD3;
-    border: #5DA7E7;
+.bottom textarea {
+    width: 60%;
     border-radius: 6px;
-    margin-right: -9px;
+    border: none;
+    padding: 1rem;
+    font-size: 0.9rem;
+    background-color: #d2ddd3;
 }
 
-.ss-Bottom-Right h1 {
-    font-family: 'Oxygen', sans-serif;
-    color: #2c4f2f;
-}
-
-.ss-Bottom-Right p {
-    font-family: 'Oxygen', sans-serif;
-    color: #2c4f2f;
-    margin-bottom: 3px;
-}
-
-.ss-Bottom-Right i {
-    color: #2c4f2f;
-    font-size: 49px;
-}
-
-.ss-Bottom-Right span {
-    margin: 0;
-    text-decoration: underline;
-    padding-bottom: 5px;
-}
-
-.ss-Bottom-Right button {
-    border: 2px solid #242825;
-    box-sizing: border-box;
+.bottom .addImg {
+    width: 30%;
+    padding: 1rem 0 1.5rem;
     border-radius: 6px;
-    height: 40px;
-    background: #D2DDD3;
-    margin-top: 15px;
-    width: 100px;
-    font-size: 18px;
+    text-align: center;
+    background-color: #d2ddd3;
+}
+
+.bottom .addImg h3 {
+    color: #242825;
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+
+.bottom .addImg i {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+}
+
+.bottom .addImg p {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.bottom .addImg button {
+    color: #242825;
+    border: solid 2px #242825;
+    padding: 0.3rem 1rem;
+    border-radius: 6px;
     cursor: pointer;
+    font-size: 0.9rem;
+    background-color: transparent;
 }
 
-.submit-button {
-    margin-left: 422px;
+.form-buttons {
+    display: flex;
     margin-top: 100px;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: auto;
 }
 
-.submit-button button {
-    background: #25742C;
+.form-buttons button {
     color: white;
-    height: 39px;
-    width: 172px;
-    font-size: 18px;
-    margin-right: 20px;
+    border: none;
+    padding: 0.3rem 2rem;
+    font-size: 1rem;
     border-radius: 6px;
-    cursor: pointer;
+    background-color: #25742c;
+}
+
+.form-buttons button:last-child {
+    margin-left: 2rem;
 }
