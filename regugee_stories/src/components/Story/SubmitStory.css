@@ -4,27 +4,29 @@
 
 .ss-Top-Section {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px;
 }
 
-.flex-col {
-    display: flex;
-    flex-direction: column;
+.submit-form  {
+    font-family: 'Oxygen', sans-serif;
+    text-align: start;
+    margin-left: 250px;
+    margin-top: 50px;
+    color: #2c4f2f;
 }
 
-.container {
-    width: 80%;
-    max-width: 960px;
-    margin: 0 auto;
+.top-Left {
     display: flex;
     flex-direction: column;
     margin-left: 200px;
     padding-top: 15px;
 }
 
-form {
-    margin-top: 50px;
-    font-family: "Oxygen", sans-serif;
+.top-Left span {
+    text-align: start;
+    font-size: 20px;
+    font-family: 'Oxygen', sans-serif;
 }
 
 .top-Left input {
@@ -32,105 +34,107 @@ form {
     height: 42px;
     margin: auto;
     border-radius: 5px;
-    background: #d2ddd3;
+    background: #D2DDD3;
     outline: none;
-    border: #5da7e7;
+    border: #5DA7E7;
     font-size: 20px;
     margin-top: 0;
     margin-bottom: 10px;
 }
 
 .top-Right {
-    width: 326px;
-    margin-right: 185px;
-    font-family: "Oxygen", sans-serif;
-    color: #04480b;
+    width:  326px;
+    margin-right: 200px;
+    font-family: 'Oxygen', sans-serif;
+    color: #04480B;
     height: 212px;
     margin-top: 13px;
     text-align: center;
     padding-top: 19px;
 }
 
+.top-Right-Links {
+    margin-left: 18px;
+}
+
 .top-Right-Links a {
     margin: 20px;
-    color: #04480b;
+    color: #04480B;
     text-decoration: underline;
-    margin-left: 19px;
-    margin-right: 32px;
     font-size: 16px;
     font-weight: bolder;
+    padding: 0;
 }
 
 .top-Right p {
     margin: 20px 0;
     text-align: start;
     margin-left: 20px;
-    width: 272px;
+    width: 317px;
     padding-left: 10px;
 }
 
-.top {
-    padding: 0 1rem;
+#anonymous {
+    display: flex;
+    width: 225px;
+    margin-right: 5px;
+}
+
+#anonymous input {
+    width: 22px;
+    margin: 0;
+}
+
+#anonymous p {
+    margin-top: 12px;
+}
+
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+.ss-Bottom-Section {
+    display: flex;
     justify-content: space-between;
 }
 
-.info {
-    width: 50%;
-}
-
-.anon-label {
-    font-size: 0.8rem;
-}
-
-.resources {
-    width: 40%;
-    text-align: center;
-}
-
-.resources p {
-    font-size: 0.9rem;
-    margin: 1rem 0;
-}
-
-.resources .links a {
-    color: #3d443e;
-}
-
 #ss-Bottom-Section {
-    background: #f4f4f4;
+    background: #F4F4F4;
     padding: 30px;
     margin: 0 210px;
     margin-bottom: 12px;
 }
 
-.bottom {
-    padding: 1rem;
-    margin-top: 75px;
+.ss-Bottom-left input {
+    width: 563px;
+    height: 668px;
+    background: #D2DDD3;
     border-radius: 6px;
-    justify-content: space-between;
-    background-color: #f4f4f4;
+    margin-left: -9px;
+    outline: none;
+    border: #5DA7E7;
 }
 
-.bottom textarea {
-    width: 60%;
+.ss-Bottom-Right {
+    border: 1px solid black;
+    width: 313px;
+    height: 300px;
+    background: #D2DDD3;
+    border: #5DA7E7;
     border-radius: 6px;
     margin-right: -9px;
     text-align: center;
     padding-top: 46px;
 }
 
-.bottom .addImg {
-    width: 30%;
-    padding: 1rem 0 1.5rem;
-    border-radius: 6px;
-    text-align: center;
-    background-color: #d2ddd3;
+.ss-Bottom-Right h1 {
+    font-family: 'Oxygen', sans-serif;
+    color: #2c4f2f;
 }
 
-.bottom .addImg h3 {
-    color: #242825;
-    font-size: 1.6rem;
-    font-weight: normal;
+.ss-Bottom-Right p {
+    font-family: 'Oxygen', sans-serif;
+    color: #2c4f2f;
+    margin-bottom: 3px;
 }
 
 .ss-Bottom-Right i {
@@ -140,48 +144,50 @@ form {
     margin-top: 10px;
 }
 
-.bottom .addImg p {
-    margin: 1rem 0;
-    font-size: 0.9rem;
+.ss-Bottom-Right span {
+    margin: 0;
+    text-decoration: underline;
+    padding-bottom: 5px;
 }
 
-.bottom .addImg button {
-    color: #242825;
-    border: solid 2px #242825;
-    padding: 0.3rem 1rem;
+.ss-Bottom-Right button {
+    border: 2px solid #242825;
+    box-sizing: border-box;
     border-radius: 6px;
+    height: 40px;
+    background: #D2DDD3;
+    margin-top: 15px;
+    width: 100px;
+    font-size: 18px;
     cursor: pointer;
-    font-size: 0.9rem;
-    background-color: transparent;
 }
 
-.form-buttons {
-    display: flex;
+.submit-button {
+    margin-left: 422px;
     margin-top: 100px;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-left: auto;
 }
 
-.form-buttons button {
+.submit-button button {
+    background: #25742C;
     color: white;
-    border: none;
-    padding: 0.3rem 2rem;
-    font-size: 1rem;
+    height: 39px;
+    width: 172px;
+    font-size: 18px;
+    margin-right: 20px;
     border-radius: 6px;
     cursor: pointer;
 }
 
 .home-text-link a {
     color: black;
-    font-family: "Oxygen", sans-serif;
+    font-family: 'Oxygen', sans-serif;
     font-size: 18px;
 }
 
-.home-text-link {
+.home-text-link  {
     margin-bottom: 49px;
     color: black;
-    font-family: "Oxygen", sans-serif;
+    font-family: 'Oxygen', sans-serif;
     font-size: 18px;
     margin-left: 210px;
     width: 114px;
@@ -199,7 +205,7 @@ textarea {
     background-color: #d2ddd3;
     font-size: 1.5rem;
     outline: none;
-    border: #5da7e7;
+    border: #5DA7E7;
     height: 668px;
 }
 
