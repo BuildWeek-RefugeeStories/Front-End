@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar />
+          <NavBar />
           <Route exact path='/register' component={Register} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/recent-stories' component={RecentStories} />
