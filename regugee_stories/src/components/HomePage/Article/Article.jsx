@@ -20,7 +20,7 @@ const Article = () => {
                 </header>
 
                 <main>
-                    <img className="article-img" src="https://via.placeholder.com/150" alt="Article Image" />
+                    <img className="article-img" src="https://via.placeholder.com/150" alt="Article Img" />
 
                     <p className="article-img-caption">
                         If there is a caption for the image, it will go here. User can provide a brief explanation for the
