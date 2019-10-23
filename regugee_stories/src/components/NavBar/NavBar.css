@@ -3,9 +3,9 @@
     display: flex;
     justify-content: space-between;
     height: 50px;
-    background: #123A16;
+    background: #123a16;
     color: white;
-    font-family: 'Oxygen', sans-serif;
+    font-family: "Oxygen", sans-serif;
 }
 
 .NavBar a {
@@ -14,9 +14,9 @@
 
 .refugee-Link {
     margin-left: 50px;
-    font-size: 40px;
+    font-size: 36px;
     padding-top: 1px;
-    font-family: 'Bilbo Swash Caps', cursive;
+    font-family: "Bilbo Swash Caps", cursive;
     font-weight: bolder;
 }
 
