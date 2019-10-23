@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './SubmitStory.css';
 import { Link } from 'react-router-dom';
-import HomeCard from '../HomePage/HomeCards';
+import axios from 'axios';
 
 
 const SubmitStory = (props) => {
@@ -84,7 +84,7 @@ const SubmitStory = (props) => {
             </div> {/* #ss-Bottom-Section end */}
             </form> {/* submit-form end */}
             <div className='home-text-link'>
-                <Link to='/home'>Return Home</Link>
+                <Link to='/recent-stories'>Return Home</Link>
             </div>
         </div> /* SubmitStory end */
     )
