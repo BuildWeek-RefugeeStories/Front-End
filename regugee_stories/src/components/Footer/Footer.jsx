@@ -17,7 +17,7 @@ function Footer() {
             </div>
 
             <div>
-                <Link to="/login" className="admin-btn">
+                <Link to='/login' className="admin-btn" href="#">
                     Admin Login
                 </Link>
                 <a href="#">Privacy Policy</a>

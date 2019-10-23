@@ -1,4 +1,8 @@
-.flex-row {
+.SubmitStory {
+    margin: 0 25px;
+}
+
+.ss-Top-Section {
     display: flex;
     flex-direction: row;
 }
@@ -14,6 +18,8 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    margin-left: 200px;
+    padding-top: 15px;
 }
 
 form {
@@ -21,23 +27,46 @@ form {
     font-family: "Oxygen", sans-serif;
 }
 
-form h1 {
-    color: #242825;
-    margin-bottom: 75px;
+.top-Left input {
+    width: 355px;
+    height: 42px;
+    margin: auto;
+    border-radius: 5px;
+    background: #d2ddd3;
+    outline: none;
+    border: #5da7e7;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
-form label {
-    color: #242825;
-    margin-bottom: 0.5rem;
+.top-Right {
+    width: 326px;
+    margin-right: 185px;
+    font-family: "Oxygen", sans-serif;
+    color: #04480b;
+    height: 212px;
+    margin-top: 13px;
+    text-align: center;
+    padding-top: 19px;
 }
 
-form input {
-    background-color: #d3ded4;
-    border-radius: 6px;
-    border: none;
-    padding: 0.5rem;
-    margin-top: 0.25rem;
-    font-size: 0.9rem;
+.top-Right-Links a {
+    margin: 20px;
+    color: #04480b;
+    text-decoration: underline;
+    margin-left: 19px;
+    margin-right: 32px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.top-Right p {
+    margin: 20px 0;
+    text-align: start;
+    margin-left: 20px;
+    width: 272px;
+    padding-left: 10px;
 }
 
 .top {
@@ -67,8 +96,11 @@ form input {
     color: #3d443e;
 }
 
-.resources .links a:last-child {
-    margin-left: 1rem;
+#ss-Bottom-Section {
+    background: #f4f4f4;
+    padding: 30px;
+    margin: 0 210px;
+    margin-bottom: 12px;
 }
 
 .bottom {
@@ -82,10 +114,9 @@ form input {
 .bottom textarea {
     width: 60%;
     border-radius: 6px;
-    border: none;
-    padding: 1rem;
-    font-size: 0.9rem;
-    background-color: #d2ddd3;
+    margin-right: -9px;
+    text-align: center;
+    padding-top: 46px;
 }
 
 .bottom .addImg {
@@ -102,9 +133,11 @@ form input {
     font-weight: normal;
 }
 
-.bottom .addImg i {
-    font-size: 2.5rem;
-    margin-top: 1rem;
+.ss-Bottom-Right i {
+    color: #2c4f2f;
+    font-size: 49px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .bottom .addImg p {
@@ -136,9 +169,41 @@ form input {
     padding: 0.3rem 2rem;
     font-size: 1rem;
     border-radius: 6px;
-    background-color: #25742c;
+    cursor: pointer;
 }
 
-.form-buttons button:last-child {
-    margin-left: 2rem;
+.home-text-link a {
+    color: black;
+    font-family: "Oxygen", sans-serif;
+    font-size: 18px;
+}
+
+.home-text-link {
+    margin-bottom: 49px;
+    color: black;
+    font-family: "Oxygen", sans-serif;
+    font-size: 18px;
+    margin-left: 210px;
+    width: 114px;
+    height: 24px;
+    margin-top: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+textarea {
+    width: 563px;
+    border-radius: 6px;
+    border: none;
+    padding: 1rem;
+    background-color: #d2ddd3;
+    font-size: 1.5rem;
+    outline: none;
+    border: #5da7e7;
+    height: 668px;
+}
+
+textarea::placeholder {
+    font-size: 18px;
+    padding-top: 10px;
 }

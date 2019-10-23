@@ -1,10 +1,16 @@
-import React from "react";
-import Article from "../HomePage/Article/Article.jsx";
+import React, { useState } from "react";
+import HomeCard from "../HomePage/HomeCards";
+import SubmitStory from "../Story/SubmitStory";
 
-const HomePage = () => {
+const HomePage = props => {
+    console.log("props value", props);
+
     return (
         <div>
-            <Article />
+            {/* {props.data.map(card => {
+               return <HomeCard card={card}/>
+           })} */}
+            <HomeCard />
         </div>
     );
 };
