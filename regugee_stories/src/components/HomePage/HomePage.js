@@ -1,12 +1,10 @@
-import React, { useState } from "react";
-import SubmitStory from "../Story/SubmitStory";
+import React from "react";
+import Article from "../HomePage/Article/Article.jsx";
 
-const HomePage = props => {
-    // const { title, author, anon, text } = props.data;
-    const [title] = useState(props.data);
+const HomePage = () => {
     return (
         <div>
-            <h1>{title}</h1>
+            <Article />
         </div>
     );
 };
