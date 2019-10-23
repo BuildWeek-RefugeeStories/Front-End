@@ -21,7 +21,7 @@ const Login = (props) => {
         .then(res => {
         localStorage.setItem("jwt", res.data.token)
         localStorage.setItem("token", res.data.token)
-        props.history.push('/recent-stories')
+        props.history.push('/home')
         })
         .catch(err => console.log(err))
     }

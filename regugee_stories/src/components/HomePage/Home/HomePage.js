@@ -1,12 +1,9 @@
-import React, { useState , useEffect} from 'react';
-import './RecentStories.css'
-import StoriesCards from './StoriesCards';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import HomeCard from '../Home/HomeCard';
+import { Link } from 'react-router-dom';
 
-
-const RecentStories = props => {
-
+const HomePage = props => {
     const [newData , setNewData] = useState([])
 
     useEffect(() => {
@@ -21,22 +18,23 @@ const RecentStories = props => {
     }, [])
 
 
+
+
+    
     return (
-        <div className='RecentStories'>
+        <div className='HomePage' >
               <div className='rs-Top'>
-                  <h1>Recent Stories</h1>
-                  <Link>Back to Home</Link>
+                  <h1>Stories Awaiting Approval</h1>
+                  <Link>Logout</Link>
               </div>
               <div>
                   {newData.map(data => {
                       console.log('Data Value...', data)
-                      return <StoriesCards key={data.id} data={data} /> 
+                      return <HomeCard key={data.id} data={data} /> 
                   })}
-            
               </div>
+        </div> /* HomePage end */
+    );
+};
 
-        </div> /* RecentStories end */
-    )
-}
-
-export default RecentStories;
+export default HomePage;

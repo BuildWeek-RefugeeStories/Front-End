@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const StoriesCards = ({data:{title, author, body, createdAt, likes, _id}}) => {
-    console.log('id', _id)
+const HomeCard = ({data:{title, author, body, createdAt, likes, _id}}) => {
     return (
         <div className='StoriesCards'>
         <Link to={`posts/${_id}`}>
@@ -23,4 +22,4 @@ const StoriesCards = ({data:{title, author, body, createdAt, likes, _id}}) => {
     )
 }
 
-export default StoriesCards;
+export default HomeCard;
