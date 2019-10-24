@@ -1,32 +1,31 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import axiosWithAuth from "../../../utils/axiosWithAuth";
 
 const ArticleCard = ({ articles }) => {
+    console.log("articles", articles);
     // const id = articles.match.params.id;
 
     const [likes, setLikes] = useState(0);
     const [approved, setApproved] = useState(false);
     const [result, setResult] = useState([]);
 
-    useEffect(() => {
-        axios
-            .get(`https://refugee-stories-api19.herokuapp.com/posts/${articles.id}`)
+    const approvedStory = e => {
+        e.preventDefault();
+        axiosWithAuth()
+            .post(`https://refugee-stories-api19.herokuapp.com/posts/approve/${articles._id}`)
             .then(res => {
+                console.log("Res ...", res);
                 setResult(res.data);
-                return axios.get(`https://refugee-stories-api19.herokuapp.com/posts/liked${articles.id}`);
             })
-            .then(res => {
-                setLikes(res.data);
-            })
-            .catch(err => {
-                console.log(err);
-            });
-    }, []);
+            .catch(err => console.log(err));
+    };
 
-    // const deleteStories = id => {
-    //     const removeStories = result.filter(item => item.id !== id)
-    //     setResult(...removeStories)
-    // }
+    const deleteStories = id => {
+        axiosWithAuth().delete(`https://refugee-stories-api19.herokuapp.com/posts/${id}`);
+        const removeStories = result.filter(item => item.id !== id);
+        setResult(...removeStories);
+    };
 
     return (
         <article>
@@ -38,9 +37,9 @@ const ArticleCard = ({ articles }) => {
                     </div>
 
                     <div>
-                        <i class="fab fa-facebook-square"></i>
-                        <i class="fab fa-twitter-square"></i>
-                        <i class="fas fa-link"></i>
+                        <i className="fab fa-facebook-square"></i>
+                        <i className="fab fa-twitter-square"></i>
+                        <i className="fas fa-link"></i>
                         <button>Back</button>
                     </div>
                 </header>
@@ -55,14 +54,8 @@ const ArticleCard = ({ articles }) => {
 
                 <footer className="flex-row">
                     <div>
-                        <button
-                            onClick={() => {
-                                setResult(result.id);
-                            }}
-                        >
-                            Approve
-                        </button>
-                        <button>Delete</button>
+                        <button onClick={approvedStory}>Approve</button>
+                        <button onClick={deleteStories}>Delete</button>
                     </div>
 
                     <div className="article-likes flex-row">
@@ -70,7 +63,7 @@ const ArticleCard = ({ articles }) => {
                             onClick={() => {
                                 setLikes(likes + 1);
                             }}
-                            class="far fa-heart"
+                            className="far fa-heart"
                         ></i>
                         <p>
                             <span className="likes">{likes}</span> Likes
