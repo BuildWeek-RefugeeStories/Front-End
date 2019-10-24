@@ -30,7 +30,7 @@ const HomePage = props => {
               <div>
                   {newData.map(data => {
                       console.log('Data Value...', data)
-                      return <HomeCard key={data.id} data={data} /> 
+                      return <HomeCard key={data._id} data={data} /> 
                   })}
               </div>
         </div> /* HomePage end */

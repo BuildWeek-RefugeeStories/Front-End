@@ -7,8 +7,6 @@ const Article = props => {
     const [articles , setArticles] = useState();
 
 useEffect(() => {
-
-    // const id = props.match.params.id;
     getArticles();
 }, [])
 
