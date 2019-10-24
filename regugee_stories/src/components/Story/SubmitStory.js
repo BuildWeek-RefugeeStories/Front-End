@@ -1,28 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import './SubmitStory.css';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import axiosWithAuth from '../../utils/axiosWithAuth'
+import React, { useState, useEffect } from "react";
+import "./SubmitStory.css";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import axiosWithAuth from "../../utils/axiosWithAuth";
 
 const SubmitStory = props => {
-    const [data, setData] = useState(
-        {
-            title: "",
-            anonymous: false,
-            body: "",
-        }
-    );
+    const [data, setData] = useState({
+        title: "",
+        anonymous: false,
+        body: ""
+    });
 
-const postStories = () => {
-        console.log('data value...', data)
+    const postStories = () => {
+        console.log("data value...", data);
         return axiosWithAuth()
-        .post('/posts/new', data)
-        .then(res => {
-            console.log('Res Value', res.data)
-            setData(res.data)
-        })
-        .catch(err => console.log(err.response))
-    }
+            .post("/posts/new", data)
+            .then(res => {
+                console.log("Res Value", res.data);
+                setData(res.data);
+            })
+            .catch(err => console.log(err.response));
+    };
 
     const handleChange = e => {
         e.preventDefault();
@@ -35,12 +33,12 @@ const postStories = () => {
         setData({ ...data });
         console.log("Saved input Value...", data);
         postStories()
-        .then(res => {
-            props.history.push("/home");
-        })
-        .catch(err => {
-            console.log(err)
-        })
+            .then(res => {
+                props.history.push("/home");
+            })
+            .catch(err => {
+                console.log(err);
+            });
     };
 
     return (
@@ -79,26 +77,29 @@ const postStories = () => {
                         <div className="ss-Bottom-left">
                             <textarea placeholder="Type Story Here" onChange={handleChange} name="body"></textarea>
                         </div>
+                        <div className="ss-Bottom-Right">
+                            <div className="addImg">
+                                <h3>Upload Image</h3>
+                                <i className="fas fa-cloud-download-alt"></i>
+                                <p>
+                                    Drag and drop <br /> or
+                                </p>
+                                <button>UPLOAD</button>
+                            </div>
+                        </div>{" "}
                     </div>
-                    <div className="bottom flex-row">
-                        <div className="addImg">
-                            <h3>Upload Image</h3>
-                            <i className="fas fa-cloud-download-alt"></i>
-                            <p>
-                                Drag and drop <br /> or
-                            </p>
-                            <button>UPLOAD</button>
-                        </div>
-                    </div>{" "}
                     {/* ss-Bottom-Section end */}
                     <div className="submit-button">
                         <button>PREVIEW</button>
                         <button>SUBMIT</button>
-                </div> {/* submit-button end */}
-            </div> {/* #ss-Bottom-Section end */}
-            </form> {/* submit-form end */}
-            <div className='home-text-link'>
-                <Link to='/recent-stories'>Return Home</Link>
+                    </div>{" "}
+                    {/* submit-button end */}
+                </div>{" "}
+                {/* #ss-Bottom-Section end */}
+            </form>{" "}
+            {/* submit-form end */}
+            <div className="home-text-link">
+                <Link to="/home">Return Home</Link>
             </div>
         </div> /* SubmitStory end */
     );

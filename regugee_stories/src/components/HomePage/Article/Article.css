@@ -1,3 +1,13 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
 article {
     margin-top: 3rem;
 }
@@ -71,6 +81,10 @@ article footer button {
     padding: 0.3rem 2rem;
     border: solid 2px #242825;
     background-color: transparent;
+}
+
+article footer button:last-child {
+    margin-left: 1rem;
 }
 
 article footer .article-likes {

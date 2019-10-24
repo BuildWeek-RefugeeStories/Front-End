@@ -8,8 +8,8 @@
     padding: 50px;
 }
 
-.submit-form  {
-    font-family: 'Oxygen', sans-serif;
+.submit-form {
+    font-family: "Oxygen", sans-serif;
     text-align: start;
     margin-left: 250px;
     margin-top: 50px;
@@ -26,7 +26,7 @@
 .top-Left span {
     text-align: start;
     font-size: 20px;
-    font-family: 'Oxygen', sans-serif;
+    font-family: "Oxygen", sans-serif;
 }
 
 .top-Left input {
@@ -34,19 +34,19 @@
     height: 42px;
     margin: auto;
     border-radius: 5px;
-    background: #D2DDD3;
+    background: #d2ddd3;
     outline: none;
-    border: #5DA7E7;
+    border: #5da7e7;
     font-size: 20px;
     margin-top: 0;
     margin-bottom: 10px;
 }
 
 .top-Right {
-    width:  326px;
+    width: 326px;
     margin-right: 200px;
-    font-family: 'Oxygen', sans-serif;
-    color: #04480B;
+    font-family: "Oxygen", sans-serif;
+    color: #04480b;
     height: 212px;
     margin-top: 13px;
     text-align: center;
@@ -59,7 +59,7 @@
 
 .top-Right-Links a {
     margin: 20px;
-    color: #04480B;
+    color: #04480b;
     text-decoration: underline;
     font-size: 16px;
     font-weight: bolder;
@@ -89,8 +89,7 @@
     margin-top: 12px;
 }
 
-
-/**//**//**//**//**//**//**//**//**//**//**//**//**/
+/**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/
 
 .ss-Bottom-Section {
     display: flex;
@@ -98,7 +97,7 @@
 }
 
 #ss-Bottom-Section {
-    background: #F4F4F4;
+    background: #f4f4f4;
     padding: 30px;
     margin: 0 210px;
     margin-bottom: 12px;
@@ -107,32 +106,32 @@
 .ss-Bottom-left input {
     width: 563px;
     height: 668px;
-    background: #D2DDD3;
+    background: #d2ddd3;
     border-radius: 6px;
     margin-left: -9px;
     outline: none;
-    border: #5DA7E7;
+    border: #5da7e7;
 }
 
 .ss-Bottom-Right {
     border: 1px solid black;
     width: 313px;
     height: 300px;
-    background: #D2DDD3;
-    border: #5DA7E7;
+    background: #d2ddd3;
+    border: #5da7e7;
     border-radius: 6px;
-    margin-right: -9px;
+    margin-right: 1px;
     text-align: center;
     padding-top: 46px;
 }
 
 .ss-Bottom-Right h1 {
-    font-family: 'Oxygen', sans-serif;
+    font-family: "Oxygen", sans-serif;
     color: #2c4f2f;
 }
 
 .ss-Bottom-Right p {
-    font-family: 'Oxygen', sans-serif;
+    font-family: "Oxygen", sans-serif;
     color: #2c4f2f;
     margin-bottom: 3px;
 }
@@ -155,7 +154,7 @@
     box-sizing: border-box;
     border-radius: 6px;
     height: 40px;
-    background: #D2DDD3;
+    background: #d2ddd3;
     margin-top: 15px;
     width: 100px;
     font-size: 18px;
@@ -168,7 +167,7 @@
 }
 
 .submit-button button {
-    background: #25742C;
+    background: #25742c;
     color: white;
     height: 39px;
     width: 172px;
@@ -180,14 +179,14 @@
 
 .home-text-link a {
     color: black;
-    font-family: 'Oxygen', sans-serif;
+    font-family: "Oxygen", sans-serif;
     font-size: 18px;
 }
 
-.home-text-link  {
+.home-text-link {
     margin-bottom: 49px;
     color: black;
-    font-family: 'Oxygen', sans-serif;
+    font-family: "Oxygen", sans-serif;
     font-size: 18px;
     margin-left: 210px;
     width: 114px;
@@ -205,7 +204,7 @@ textarea {
     background-color: #d2ddd3;
     font-size: 1.5rem;
     outline: none;
-    border: #5DA7E7;
+    border: #5da7e7;
     height: 668px;
 }
 
