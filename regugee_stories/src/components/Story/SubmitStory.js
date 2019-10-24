@@ -13,6 +13,7 @@ const SubmitStory = props => {
         }
     );
 
+
 const postStories = () => {
         console.log('data value...', data)
         return axiosWithAuth()
@@ -23,6 +24,13 @@ const postStories = () => {
         })
         .catch(err => console.log(err.response))
     }
+
+const checkedBox = e => {
+    e.preventDefault();
+   if(data.anonymous === true) {
+      return data.author.name === 'anonymous'
+   }
+}
 
     const handleChange = e => {
         e.preventDefault();
@@ -54,7 +62,7 @@ const postStories = () => {
                         <span>Author</span>
                         <input onChange={handleChange} name="author"></input>
                         <div id="anonymous">
-                            <input type="checkbox"></input>
+                            <input checkedBox={checkedBox} type="checkbox"></input>
                             <p>I prefer to stay anonymous</p>
                         </div>{" "}
                         {/* anonymous end */}
