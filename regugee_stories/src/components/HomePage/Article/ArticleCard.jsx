@@ -1,28 +1,28 @@
-import React, {useState , useEffect} from 'react';
-import axios from 'axios'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-const ArticleCard = ({articles}) => {
+const ArticleCard = ({ articles }) => {
     // const id = articles.match.params.id;
 
     const [likes, setLikes] = useState(0);
     const [approved, setApproved] = useState(false);
     const [result, setResult] = useState([]);
-    
 
     useEffect(() => {
-    axios.get(`https://refugee-stories-api19.herokuapp.com/posts/${articles.id}`)
-        .then(res => {
-        setResult(res.data)
-        return axios.get(`https://refugee-stories-api19.herokuapp.com/posts/liked${articles.id}`);
-    })
-    .then((res) => {
-        setLikes(res.data)
-    })
-    .catch((err) => {
-        console.log(err)
-    });
-    }, [])
-    
+        axios
+            .get(`https://refugee-stories-api19.herokuapp.com/posts/${articles.id}`)
+            .then(res => {
+                setResult(res.data);
+                return axios.get(`https://refugee-stories-api19.herokuapp.com/posts/liked${articles.id}`);
+            })
+            .then(res => {
+                setLikes(res.data);
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }, []);
+
     // const deleteStories = id => {
     //     const removeStories = result.filter(item => item.id !== id)
     //     setResult(...removeStories)
@@ -46,25 +46,32 @@ const ArticleCard = ({articles}) => {
                 </header>
 
                 <main>
-                    <img src='https://pbs.twimg.com/media/DvUzKCSWwAA3FbS.jpg' className="article-img" alt="Article Img" />
+                    <img src="https://pbs.twimg.com/media/DvUzKCSWwAA3FbS.jpg" className="article-img" alt="Article Img" />
 
                     <div className="article-content">
-                        <p>{articles.body}</p> 
+                        <p>{articles.body}</p>
                     </div>
                 </main>
 
                 <footer className="flex-row">
                     <div>
-                        <button onClick={() => {
-                            setResult(result.id)
-                        }}>Approve</button>
+                        <button
+                            onClick={() => {
+                                setResult(result.id);
+                            }}
+                        >
+                            Approve
+                        </button>
                         <button>Delete</button>
                     </div>
-                
+
                     <div className="article-likes flex-row">
-                        <i onClick={() => {
-                            setLikes(likes + 1)
-                        }} class="far fa-heart"></i>
+                        <i
+                            onClick={() => {
+                                setLikes(likes + 1);
+                            }}
+                            class="far fa-heart"
+                        ></i>
                         <p>
                             <span className="likes">{likes}</span> Likes
                         </p>
@@ -72,7 +79,7 @@ const ArticleCard = ({articles}) => {
                 </footer>
             </div>
         </article>
-    )
-}
+    );
+};
 
 export default ArticleCard;
