@@ -39,7 +39,7 @@ const RecentStories = ({articles}) => {
               </div>
               <div>
                    {/* {JSON.stringify(newData)} */}
-                   {newData && <StoriesCards newData={newData} />}
+                   {newData && <StoriesCards newData={newData} /> }
               </div>
 
         </div> /* RecentStories end */
