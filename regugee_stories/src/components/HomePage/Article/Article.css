@@ -75,6 +75,8 @@ article footer button {
 
 article footer .article-likes {
     align-items: center;
+    display: flex;
+    flex-direction: row;
 }
 
 article footer .article-likes i {
