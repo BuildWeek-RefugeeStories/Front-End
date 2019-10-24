@@ -31,7 +31,7 @@ function App() {
               return <Article {...props} addToList={addToList}/>
             }
           } />
-          {/* <Footer /> */}
+          <Footer />
       </Router>
     </div>
   );
