@@ -2,25 +2,35 @@ import React, { useState , useEffect} from 'react';
 import './RecentStories.css'
 import StoriesCards from './StoriesCards';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import axiosWithAuth from '../../../utils/axiosWithAuth';
 
 
 
 
-const RecentStories = props => {
+const RecentStories = ({articles}) => {
 
-    const [newData , setNewData] = useState([])
+    const [newData , setNewData] = useState()
 
     useEffect(() => {
-        axios 
-        .get(`https://refugee-stories-api19.herokuapp.com/posts/${props.id}`)
+        getApprovedArticle();
+    }, [])
+
+    const getApprovedArticle = () => {
+        axiosWithAuth()
+        .get(`https://refugee-stories-api19.herokuapp.com/posts/`)
         .then(res => {
-            setNewData(res.data)
+            res.data.map(result => {
+                console.log('results approved value...',result.approved)
+                if(result.approved === true) {
+                setNewData(result)
+                console.log('NewData', newData)
+            }
+            })
+            console.log('Res value...', res)
         })
         .catch(err => console.log(err))
-    })
-
-
+    }
+     
     return (
         <div className='RecentStories'>
               <div className='rs-Top'>
@@ -28,11 +38,8 @@ const RecentStories = props => {
                   <Link>Back to Home</Link>
               </div>
               <div>
-                  {newData.map(data => {
-                      console.log('Data Value...', data)
-                      return <StoriesCards key={data.id} data={data} /> 
-                  })}
-            
+                   {/* {JSON.stringify(newData)} */}
+                   {newData && <StoriesCards newData={newData} />}
               </div>
 
         </div> /* RecentStories end */
