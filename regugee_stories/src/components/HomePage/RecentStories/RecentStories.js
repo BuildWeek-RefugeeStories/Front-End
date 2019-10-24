@@ -5,20 +5,20 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
+
+
 const RecentStories = props => {
 
     const [newData , setNewData] = useState([])
 
     useEffect(() => {
-        axios
-        .get(`https://refugee-stories-api19.herokuapp.com/posts/`)
+        axios 
+        .get(`https://refugee-stories-api19.herokuapp.com/posts/${props.id}`)
         .then(res => {
             setNewData(res.data)
         })
-        .catch(err => {
-            console.log(err)
-        })
-    }, [])
+        .catch(err => console.log(err))
+    })
 
 
     return (

@@ -9,12 +9,14 @@ import Footer from "./components/Footer/Footer";
 import RecentStories from './components/HomePage/RecentStories/RecentStories'
 import Article from './components/HomePage/Article/Article';
 import HomePage from './components/HomePage/Home/HomePage';
+import HomeCard from './components/HomePage/Home/HomeCard';
 
 function App() {
   const [newArticle, setNewArticle] = useState([])
   const addToList = item => {
     setNewArticle([...newArticle, item])
   }
+  
   return (
     <div className="App">
       <Router>

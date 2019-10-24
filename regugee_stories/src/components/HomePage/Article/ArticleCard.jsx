@@ -1,19 +1,32 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState , useEffect} from 'react';
 import axios from 'axios'
 
 const ArticleCard = ({articles}) => {
+    // const id = articles.match.params.id;
 
     const [likes, setLikes] = useState(0);
+    const [approved, setApproved] = useState(false);
+    const [result, setResult] = useState([]);
+    
 
     useEffect(() => {
-
-        axios
-        .get(`https://refugee-stories-api19.herokuapp.com/posts/liked`)
+    axios.get(`https://refugee-stories-api19.herokuapp.com/posts/${articles.id}`)
         .then(res => {
-            setLikes(res.data)
-        })
-        .catch(err => console.log(err))
+        setResult(res.data)
+        return axios.get(`https://refugee-stories-api19.herokuapp.com/posts/liked${articles.id}`);
     })
+    .then((res) => {
+        setLikes(res.data)
+    })
+    .catch((err) => {
+        console.log(err)
+    });
+    }, [])
+    
+    // const deleteStories = id => {
+    //     const removeStories = result.filter(item => item.id !== id)
+    //     setResult(...removeStories)
+    // }
 
     return (
         <article>
@@ -33,7 +46,7 @@ const ArticleCard = ({articles}) => {
                 </header>
 
                 <main>
-                    <img className="article-img" alt="Article Img" />
+                    <img src='https://pbs.twimg.com/media/DvUzKCSWwAA3FbS.jpg' className="article-img" alt="Article Img" />
 
                     <div className="article-content">
                         <p>{articles.body}</p> 
@@ -41,7 +54,13 @@ const ArticleCard = ({articles}) => {
                 </main>
 
                 <footer className="flex-row">
-                    <button>Back</button>
+                    <div>
+                        <button onClick={() => {
+                            setResult(result.id)
+                        }}>Approve</button>
+                        <button>Delete</button>
+                    </div>
+                
                     <div className="article-likes flex-row">
                         <i onClick={() => {
                             setLikes(likes + 1)

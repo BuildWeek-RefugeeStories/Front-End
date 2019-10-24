@@ -36,7 +36,7 @@ const postStories = () => {
         console.log("Saved input Value...", data);
         postStories()
         .then(res => {
-            props.history.push("/recent-stories");
+            props.history.push("/home");
         })
         .catch(err => {
             console.log(err)
