@@ -17,15 +17,16 @@ const HomePage = props => {
         })
     }, [])
 
+    const logOut = () => {
+        localStorage.removeItem('token')
+    }
 
 
-
-    
     return (
         <div className='HomePage' >
               <div className='rs-Top'>
                   <h1>Stories Awaiting Approval</h1>
-                  <Link>Logout</Link>
+                  <Link onClick={logOut} to='/login'>Logout</Link>
               </div>
               <div>
                   {newData.map(data => {

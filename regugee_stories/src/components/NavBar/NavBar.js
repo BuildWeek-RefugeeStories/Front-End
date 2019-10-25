@@ -12,7 +12,7 @@ const Navbar = () => {
             <Link to='/home'>Home</Link>
             <Link to='/recent-stories'>Recent Stories</Link>
             <Link to='/stories'>Submit a Story</Link>
-            <Link> Get Involved</Link>
+            <Link to='/register'> Get Involved</Link>
           </div> {/* navBar-Links end */}
       </div> /* NavBar end */
   )

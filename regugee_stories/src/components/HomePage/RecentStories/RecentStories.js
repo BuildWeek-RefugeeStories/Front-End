@@ -35,7 +35,7 @@ const RecentStories = ({articles}) => {
         <div className='RecentStories'>
               <div className='rs-Top'>
                   <h1>Recent Stories</h1>
-                  <Link>Back to Home</Link>
+                  <Link to='/home'>Back to Home</Link>
               </div>
               <div>
                    {/* {JSON.stringify(newData)} */}

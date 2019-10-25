@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Login.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import axiosWithAuth from '../../utils/axiosWithAuth';
 
 const Login = (props) => {
 
@@ -16,10 +17,9 @@ const Login = (props) => {
     }
 
     const validUser = input => {
-        axios
-        .post("https://refugee-stories-api19.herokuapp.com/auth/login", input)
+        axiosWithAuth()
+        .post("auth/login", input)
         .then(res => {
-        localStorage.setItem("jwt", res.data.token)
         localStorage.setItem("token", res.data.token)
         props.history.push('/home')
         })
