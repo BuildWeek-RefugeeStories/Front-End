@@ -1,6 +1,7 @@
 import React, {useState , useEffect} from 'react';
 import axios from 'axios'
 import axiosWithAuth from '../../../utils/axiosWithAuth';
+import {Link} from 'react-router-dom';
 
 const ArticleCard = ({articles}) => {
     console.log('articles', articles)
@@ -26,7 +27,7 @@ const ArticleCard = ({articles}) => {
     
     const deleteStories = id => {
         axiosWithAuth()
-        .delete(`https://refugee-stories-api19.herokuapp.com/posts/${id}`)
+        .delete(`https://refugee-stories-api19.herokuapp.com/posts/${articles._id}`)
         const removeStories = result.filter(item => item.id !== id)
         setResult(...removeStories)
     }
@@ -44,7 +45,7 @@ const ArticleCard = ({articles}) => {
                         <i className="fab fa-facebook-square"></i>
                         <i className="fab fa-twitter-square"></i>
                         <i className="fas fa-link"></i>
-                        <button>Back</button>
+                        <Link to='/home'><button to='/home'>Back</button></Link>
                     </div>
                 </header>
 
