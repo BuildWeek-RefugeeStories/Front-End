@@ -1,0 +1,100 @@
+.rs-Top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+
+
+.rs-Top h1 {
+  font-family: Oxygen;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  margin-left: 184px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rs-Top a {
+  font-family: Oxygen;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #242825;
+  border: 2px solid #242825;
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin-right: 188px;
+  width: 188px;
+  height: 48px;
+  margin-top: 32px;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  padding: 8px;
+}
+
+
+
+
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+.StoriesCards {
+  display: flex;
+  border: 1px solid black;
+  background: #F0F4F1;
+  box-shadow: 0px 0.5px 6px rgba(180, 180, 180, 0.25);
+  border-radius: 6px;
+  justify-content: space-between;
+  margin: 10px 187px;
+}
+
+.card-Img img {
+  width: 489px;
+  height: 326px;
+  border-radius: 6px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.story-Title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stories-info {
+  width: 467px;
+}
+.stories-info h1 {
+  font-family: Oxygen;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  padding-left: 20px;
+  padding-top: 40px;
+}
+
+.stories-info h3 {
+  font-family: Oxygen;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  padding-top: 45px;
+  margin-right: 68px;
+}
+
+.stories-info p {
+  margin-left: 20px;
+  margin-top: 70px;
+  font-family: 'Domine', serif;
+}
+

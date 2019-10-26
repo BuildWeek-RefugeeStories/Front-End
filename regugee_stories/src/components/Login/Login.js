@@ -16,6 +16,9 @@ const Login = (props) => {
             props.reauth()
             .then(() => {
                 props.history.push('/');
+            })
+            .catch(() => {
+                localStorage.removeItem('token');
             });
         }
     }
@@ -58,7 +61,8 @@ const Login = (props) => {
         if(vaildate())
             props.login(form.email, form.password)
             .then(() => {
-                props.history.push('/');
+                if(props.token)
+                    props.history.push('/');
             });
     }
 

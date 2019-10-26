@@ -7,6 +7,12 @@ const initialState = {
   firstName: '',
   lastName: '',
   country: '',
+  level: '',
+  fetchingPosts: false,
+  fetchPostError: '',
+  posts: [],
+  approving: false,
+  approveError: ''
 }
 
 const reducer = (state = initialState, action) => {
@@ -26,6 +32,7 @@ const reducer = (state = initialState, action) => {
         firstName: action.payload.firstName,
         lastName: action.payload.lastName,
         country: action.payload.country,
+        level: action.payload.level
       }
     }
     case (actions.AUTH_FAILURE): {
@@ -43,7 +50,57 @@ const reducer = (state = initialState, action) => {
         token: '',
         firstName: '',
         lastName: '',
+        level: '',
         country: '',
+      }
+    }
+    case (actions.FETCHPOST_START): {
+      return {
+        ...state,
+        fetchPostError: '',
+        fetchingPosts: true
+      }
+    }
+    case (actions.FETCHPOST_SUCCESS): {
+      return {
+        ...state,
+        fetchingPosts: false,
+        posts: action.payload
+      }
+    }
+    case (actions.FETCHPOST_FAILURE): {
+      return {
+        ...state,
+        fetchingPosts: false,
+        fetchPostError: action.payload
+      }
+    }
+    case (actions.APPROVE_START): {
+      return {
+        ...state,
+        approveError: '',
+        approving: true
+      }
+    }
+    case (actions.APPROVE_SUCCESS): {
+      return {
+        ...state,
+        approving: false
+      }
+    }
+    case (actions.APPROVE_FAILURE): {
+      return {
+        ...state,
+        approving: false,
+        approveError: action.payload
+      }
+    }
+    case (actions.CLEAR_ERRORS): {
+      return {
+        ...state,
+        authError: '',
+        fetchPostError: '',
+        approveError: ''
       }
     }
     default: {

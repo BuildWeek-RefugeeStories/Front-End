@@ -1,34 +1,37 @@
-import React, { useState , useEffect} from 'react';
+import React, { useEffect} from 'react';
 import './RecentStories.css'
 import StoriesCards from './StoriesCards';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+
+import { Spinner } from 'reactstrap';
 
 
-const RecentStories = () => {
+import { fetchPosts } from '../../../actions';
 
-    const [newData , setNewData] = useState([])
+import { connect } from 'react-redux';
 
-    useEffect(() => {
-        axios
-        .get('https://refugee-stories-api19.herokuapp.com/posts')
-        .then(res => {
-            setNewData(res.data)
-        })
-        .catch(err => {
-            console.log(err)
-        })
-    }, [])
 
+const RecentStories = props => {
+    useEffect(() => {props.fetchPosts()}, []);
 
     return (
         <div className='RecentStories'>
               <div className='rs-Top'>
                   <h1>Recent Stories</h1>
-                  <Link>Back to Home</Link>
-              </div>
-              <div>
-                  {newData.map(data => {
+                  { (props.level === 'admin' || props.level === 'owner') &&
+                  <Link to="/awaiting" className='awaiting'>Awaiting Approval</Link>
+                  }
+                  </div>
+              <div className='body'>
+                  {props.fetchingPosts ? <Spinner className='spinner' type='grow' /> :
+                      props.fetchError ? (
+                        <div className='error'>
+                            {props.fetchError}
+                        </div>
+                      ) : props.posts.length === 0 ? (
+                          <span>There are no posts to show.</span>
+                      ) :
+                      props.posts.map(data => {
                       return <StoriesCards key={data.id} {...data} /> 
                   })}
             
@@ -38,4 +41,11 @@ const RecentStories = () => {
     )
 }
 
-export default RecentStories;
+const mapStateToProps = state => ({
+    posts: state.posts,
+    fetchingPosts: state.fetchingPosts,
+    fetchError: state.fetchPostError,
+    level: state.level
+});
+
+export default connect(mapStateToProps, { fetchPosts }) (RecentStories);

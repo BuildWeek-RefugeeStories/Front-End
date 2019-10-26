@@ -6,13 +6,13 @@ function Footer() {
             <div>
                 <p>Contact Us:</p>
                 <p>
-                    <span>Street Number</span>
-                    <span>City</span>
-                    <span>State, ZIP</span>
+                    <span>7458 Technology Drive</span>
+                    <span>Irvine</span>
+                    <span>CA, 92604</span>
                 </p>
                 <p>
-                    <span>(XXX)-XXX-XXXX</span>
-                    <span>sample@email.com</span>
+                    <span>(800)-123-4567</span>
+                    <span>notreal@refugee-stories.com</span>
                 </p>
             </div>
 
