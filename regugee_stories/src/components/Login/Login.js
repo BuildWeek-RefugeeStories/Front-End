@@ -3,54 +3,89 @@ import './Login.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
+import { connect } from 'react-redux';
+
+import { login, register, reauth } from '../../actions';
+
 const Login = (props) => {
 
-    const [loggedIn, setLoggedIn] = useState({
+    if(props.token) {
+        props.history.push('/');
+    } else {
+        if(localStorage.getItem('token')) {
+            props.reauth()
+            .then(() => {
+                props.history.push('/');
+            });
+        }
+    }
+
+    const [form, setForm] = useState({
         email: '',
-        password: ''
+        password: '',
+        error: ''
     })
 
     const handleChange = e => {
-        setLoggedIn({...loggedIn, [e.target.name]: e.target.value})
-        console.log('Login input value...', loggedIn)
+        setForm({...form,
+            error: '',
+            [e.target.name]: e.target.value})
     }
 
-    const validUser = input => {
-        axios
-        .post("https://refugee-stories-api19.herokuapp.com/auth/login", input)
-        .then(res => {
-        localStorage.setItem("jwt", res.data.token)
-        localStorage.setItem("token", res.data.token)
-        props.history.push('/recent-stories')
+    // Validate our form data
+    const vaildate = () => {
+        if(!form.email.trim()) {
+            setError('Email field is required');
+            return false;
+        }
+        else if(!form.password.trim()) {
+            setError('Please enter a password');
+            return false;
+        }
+        // Form data is valid
+        else return true;
+    }
+
+    const setError = err => {
+        setForm({
+            ...form,
+            error: err
         })
-        .catch(err => console.log(err))
     }
 
     const onSubmit = e => {
         e.preventDefault();
-        validUser({...loggedIn});
+        if(vaildate())
+            props.login(form.email, form.password)
+            .then(() => {
+                props.history.push('/');
+            });
     }
-
-    
 
     return (
         <div className='Login'>
-            <h1>Administrator Login</h1>
+            <h1>Login</h1>
             <p>Please enter your email and password</p>
             <form onSubmit={onSubmit} className='login-form'>
                 <input
                 onChange={handleChange} 
                 type='email' 
                 name='email' 
+                disabled={props.authenticating}
                 placeholder='Email'>
                 </input>
                 <input
                 onChange={handleChange} 
                 type='password'
                 name='password' 
+                disabled={props.authenticating}
                 placeholder='Password'>
                 </input>
-                <button>Login</button>
+                <button disabled={props.authenticating} type="submit" action="submit">Login</button>
+                <div className='error'>
+                    {form.error && form.error}
+                    {props.authError && props.authError}
+                </div>
             </form> {/* login-form end */}
 
             <div id='register'>
@@ -61,4 +96,10 @@ const Login = (props) => {
     )
 }
 
-export default Login;
+const mapStateToProps = state => ({
+    authenticating: state.authenticating,
+    authError: state.authError,
+    token: state.token
+});
+
+export default connect(mapStateToProps, { login, register, reauth })(Login);

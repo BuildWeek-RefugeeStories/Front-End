@@ -20,9 +20,17 @@
     flex-direction: column;
 }
 
+.error {
+    display: flex;
+    margin: 0 auto;
+    color: crimson;
+    padding: 12px;
+}
+
 .login-form input {
     width: 250px;
     height: 40px;
+    padding: 8px;
     margin: auto;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -42,25 +50,40 @@
     height: 40px;
     margin: auto;
     border-radius: 5px;
-    background: #25742C;
+    background-color: #25742C;
     color: white;
     margin-bottom: 25px;
+    border: none;
     font-size: 20px;
     text-shadow: 1px 1px black;
     margin-top: 10px;
+
+    transition: background-color 0.2s;
 }
 
+.login-form button:hover {
+    background-color: #51C85C;
+}
+
+.login-form button:disabled {
+    background-color: #123A16;
+}
 
 #register  {
+    margin: 0 auto;
     margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
 }
 
 #register a {
     text-decoration: none;
     color: black;
-    margin-left: 664px;
+    
+    transition: color 0.2s;
+
 }
 
 #register a:hover {
-    color: #25742C;
+    color: #F5C63D;
 }

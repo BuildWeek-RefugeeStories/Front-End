@@ -2,7 +2,7 @@
     border: 1px solid black;
     display: flex;
     justify-content: space-between;
-    height: 50px;
+    height: 64px;
     background: #123a16;
     color: white;
     font-family: "Oxygen", sans-serif;
@@ -15,18 +15,25 @@
 .refugee-Link {
     margin-left: 50px;
     font-size: 36px;
-    padding-top: 1px;
+    padding-top: 6px;
     font-family: "Bilbo Swash Caps", cursive;
     font-weight: bolder;
 }
 
 .navBar-Links {
-    margin-right: 50px;
-    padding-top: 15px;
+    margin-right: 25px;
+    display: flex;
+    align-items: center;
+}
+
+#Popover {
+    margin-left: 12px;
+    margin-right: 12px;
 }
 
 .navBar-Links a {
-    margin-left: 20px;
+    margin-left: 12px;
+    margin-right: 12px;
     text-decoration: none;
     color: white;
 }

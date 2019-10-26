@@ -18,7 +18,7 @@ const RecentStories = () => {
         .catch(err => {
             console.log(err)
         })
-    })
+    }, [])
 
 
     return (
@@ -29,7 +29,7 @@ const RecentStories = () => {
               </div>
               <div>
                   {newData.map(data => {
-                      return <StoriesCards {...data} /> 
+                      return <StoriesCards key={data.id} {...data} /> 
                   })}
             
               </div>

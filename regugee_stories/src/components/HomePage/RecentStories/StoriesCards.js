@@ -14,7 +14,7 @@ const StoriesCards = ({title, author, body, createdAt, likes}) => {
                  </div>
              </div> {/* stories-info end */}
              <div className='card-Img'>
-                 <img src='https://pbs.twimg.com/media/DvUzKCSWwAA3FbS.jpg'></img>
+                 <img alt={title} src='https://pbs.twimg.com/media/DvUzKCSWwAA3FbS.jpg'></img>
              </div>
         </div> /* StoriesCards end */
     )

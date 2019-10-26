@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './SubmitStory.css';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import axiosWithAuth from '../../utils/axiosWithAuth'
 
 const SubmitStory = props => {
@@ -67,8 +66,8 @@ const postStories = () => {
                             Guide” link for tips on conveying your ideas.
                         </p>
                         <div className="top-Right-Links">
-                            <a href="#">Google Translate</a>
-                            <a href="#">Writing Guide</a>
+                            <a href="">Google Translate</a>
+                            <a href="">Writing Guide</a>
                         </div>
                     </div>{" "}
                     {/* top-Right end */}
